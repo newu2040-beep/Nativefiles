@@ -40,29 +40,29 @@ export function FileList({ files, title, onFileClick }: FileListProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05 }}
             onClick={() => onFileClick?.(file)}
-            className="flex items-center p-3 sm:p-4 rounded-2xl hover:bg-white/5 cursor-pointer group transition-colors"
+            className="flex items-center p-3 sm:p-4 rounded-2xl hover:bg-element-muted cursor-pointer group transition-colors"
           >
-            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-white/10 transition-colors">
+            <div className="w-12 h-12 rounded-xl bg-element-muted flex items-center justify-center mr-4 group-hover:bg-surface-border transition-colors">
               {getFileIcon(file.type)}
             </div>
             
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
-                <h3 className="font-medium text-white/90 truncate">{file.name}</h3>
+                <h3 className="font-medium text-text-primary truncate">{file.name}</h3>
                 {file.isFavorite && <Heart className="w-3.5 h-3.5 text-pink-500 fill-pink-500 flex-shrink-0" />}
               </div>
-              <div className="flex items-center text-xs font-inter text-white/50 mt-1">
+              <div className="flex items-center text-xs font-inter text-text-secondary mt-1">
                 <span>{formatDate(file.dateModified)}</span>
                 {file.type !== 'folder' && (
                   <>
-                    <span className="mx-2 w-1 h-1 rounded-full bg-white/20" />
+                    <span className="mx-2 w-1 h-1 rounded-full bg-text-tertiary/40" />
                     <span>{formatBytes(file.size)}</span>
                   </>
                 )}
               </div>
             </div>
             
-            <button className="p-2 text-white/40 hover:text-white/90 rounded-full hover:bg-white/10 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">
+            <button className="p-2 text-text-tertiary hover:text-text-primary rounded-full hover:bg-element-muted transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">
               <MoreVertical className="w-5 h-5" />
             </button>
           </motion.div>

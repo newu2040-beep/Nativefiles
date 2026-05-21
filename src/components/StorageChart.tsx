@@ -18,17 +18,17 @@ export function StorageChart({ storage }: StorageChartProps) {
       <div className="absolute bottom-0 right-10 w-24 h-24 bg-purple-500/10 rounded-full blur-xl" />
       
       <div className="flex-1 z-10">
-        <div className="flex items-center gap-2 text-white/70 mb-1">
+        <div className="flex items-center gap-2 text-text-secondary mb-1">
           <HardDrive className="w-4 h-4" />
           <span className="font-medium text-sm font-inter tracking-wide uppercase">Internal Storage</span>
         </div>
         <div className="flex items-baseline gap-2 mb-4">
-          <span className="text-4xl font-bold">{formatBytes(storage.used, 1).split(' ')[0]}</span>
-          <span className="text-xl font-medium text-white/50">{formatBytes(storage.used, 1).split(' ')[1]} / {formatBytes(storage.total, 0)}</span>
+          <span className="text-4xl font-bold text-text-primary">{formatBytes(storage.used, 1).split(' ')[0]}</span>
+          <span className="text-xl font-medium text-text-secondary">{formatBytes(storage.used, 1).split(' ')[1]} / {formatBytes(storage.total, 0)}</span>
         </div>
         
         {/* Progress Bar */}
-        <div className="h-3 w-full bg-surface-dark rounded-full overflow-hidden border border-white/5 relative">
+        <div className="h-3 w-full bg-element-muted rounded-full overflow-hidden border border-surface-border relative">
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: `${percentage}%` }}

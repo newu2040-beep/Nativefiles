@@ -37,10 +37,10 @@ export function CategoryGrid({ storage }: CategoryGridProps) {
             className="flex flex-col items-center p-4 glass-card cursor-pointer hover:bg-surface-card/90 transition-colors"
           >
             <div className={`w-12 h-12 rounded-2xl ${item.bg} flex items-center justify-center mb-3`}>
-              <Icon className="w-6 h-6 text-white/90" />
+              <Icon className="w-6 h-6 text-text-primary" />
             </div>
-            <span className="text-sm font-medium text-white/90 mb-1">{item.label}</span>
-            <span className="text-xs font-inter text-white/50">{formatBytes(getCategorySize(item.id), 1)}</span>
+            <span className="text-sm font-medium text-text-primary mb-1">{item.label}</span>
+            <span className="text-xs font-inter text-text-secondary">{formatBytes(getCategorySize(item.id), 1)}</span>
           </motion.div>
         );
       })}

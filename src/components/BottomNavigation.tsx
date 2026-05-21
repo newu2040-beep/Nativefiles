@@ -23,7 +23,7 @@ interface BottomNavigationProps {
 
 export function BottomNavigation({ currentTab, onChange }: BottomNavigationProps) {
   return (
-    <div className="absolute bottom-0 left-0 w-full px-6 pb-6 pt-4 bg-gradient-to-t from-surface-dark via-surface-dark to-transparent z-50">
+    <div className="absolute bottom-0 left-0 w-full px-6 pb-6 pt-4 bg-gradient-to-t from-surface-bg via-surface-bg to-transparent z-50">
       <div className="glass-card px-6 py-4 flex justify-between items-center relative">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -35,7 +35,7 @@ export function BottomNavigation({ currentTab, onChange }: BottomNavigationProps
               onClick={() => onChange(item.id)}
               className={cn(
                 "relative flex flex-col items-center justify-center w-14 h-14 transition-colors",
-                isActive ? "text-brand-400" : "text-white/50 hover:text-white/80"
+                isActive ? "text-brand-500" : "text-text-secondary hover:text-text-primary"
               )}
             >
               {isActive && (
