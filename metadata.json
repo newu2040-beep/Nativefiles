@@ -1,0 +1,6 @@
+{
+  "name": "Nativefiles",
+  "description": "A premium modern file manager with dark theme, glassmorphism, and fluid animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
